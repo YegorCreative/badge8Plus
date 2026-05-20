@@ -33,12 +33,14 @@
   border-radius: var(--radius-md);
 }
 
+/* Problem media: square abstract frame on mobile — smaller than hero */
 .problem-media .visual-frame {
   display: block;
   width: 100%;
-  aspect-ratio: 16 / 7;
+  max-width: 340px;              /* Constrained on mobile — editorial, not dominant */
+  aspect-ratio: 1 / 1;
   border-radius: var(--radius-md);
-  margin-top: var(--space-2xl);
+  margin-top: var(--space-xl);
 }
 
 .process-visual {
