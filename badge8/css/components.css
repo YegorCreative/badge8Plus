@@ -32,7 +32,7 @@
   background-color: var(--text-primary);
   border-color: var(--text-primary);
   color: var(--bg-primary);
-  box-shadow: 0 0 24px rgba(255, 255, 255, 0.1);
+  /* Removed flashy white glow to maintain pure corporate restraint */
 }
 
 /* Secondary Refined Outline Button */
@@ -45,7 +45,7 @@
 .btn-outline:hover {
   border-color: var(--accent-gold);
   color: var(--text-primary);
-  box-shadow: var(--shadow-glow);
+  /* Grounded outline transition with zero floating shadows */
 }
 
 /* Text-Only Link Button */
@@ -85,7 +85,7 @@
 }
 
 .card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-2px); /* Subtly grounded lift */
   border-color: var(--border-color-hover);
   box-shadow: var(--shadow-md);
 }

@@ -70,6 +70,10 @@ body.nav-menu-active {
     --space-5xl: 9rem;
   }
 
+  .grid {
+    gap: var(--space-2xl); /* Dynamic tablet grid gap expansion */
+  }
+
   .grid-2 {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -96,6 +100,10 @@ body.nav-menu-active {
     --space-5xl: 10rem;
   }
 
+  .grid {
+    gap: var(--space-3xl); /* Dynamic spacious grid gap on desktop */
+  }
+
   /* Reset mobile nav overlay to standard top row */
   .nav-menu {
     position: static;
@@ -120,6 +128,34 @@ body.nav-menu-active {
 
   .grid-4 {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* Premium Card Spacing and layout breathing room */
+  .card {
+    padding: var(--space-2xl); /* 48px interior padding for dynamic cards */
+  }
+
+  .advantage-card {
+    padding: var(--space-3xl) var(--space-2xl); /* Luxurious 64px vertical and 48px horizontal paddings */
+  }
+
+  .use-case-item {
+    padding: var(--space-2xl) 0;
+    gap: var(--space-xl);
+  }
+
+  .process-steps {
+    gap: var(--space-2xl);
+  }
+
+  .process-step {
+    gap: var(--space-2xl);
+    padding-bottom: var(--space-2xl);
+  }
+
+  .diff-table th,
+  .diff-table td {
+    padding: var(--space-xl) var(--space-lg); /* Expanded vertical/horizontal padding inside rows */
   }
 
   /* Footer Layout for Desktop */
