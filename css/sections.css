@@ -145,6 +145,8 @@
   color: var(--text-primary);
   letter-spacing: -0.015em;
   margin-bottom: var(--space-lg);
+  padding-left: var(--space-xl);
+  border-left: 2px solid var(--accent-border);
 }
 
 .problem-meta {
@@ -203,7 +205,7 @@
    4. Core Advantages
    ========================================================================== */
 .section-advantages {
-  background-color: var(--bg-primary);
+  background-color: var(--bg-secondary);
 }
 
 .advantage-card {
@@ -216,7 +218,7 @@
   font-family: var(--font-primary);
   font-size: 2rem;
   font-weight: 300;
-  color: rgba(0, 0, 0, 0.10);   /* Near invisible — structural only */
+  color: rgba(0, 0, 0, 0.13);   /* Near invisible — structural only */
   line-height: 1;
   margin-bottom: var(--space-md);
   letter-spacing: -0.03em;
@@ -254,6 +256,7 @@
    ========================================================================== */
 .section-process {
   background-color: var(--bg-primary);
+  border-top: 1px solid var(--border-color);
 }
 
 .process-inner {
@@ -371,9 +374,11 @@
    ========================================================================== */
 .section-cta {
   background-color: var(--bg-primary);
+  background-image: radial-gradient(ellipse 80% 60% at center, rgba(77, 98, 120, 0.04) 0%, transparent 70%);
   text-align: center;
   padding-top: var(--space-5xl);
   padding-bottom: var(--space-5xl);
+  border-top: 1px solid var(--border-color);
 }
 
 .cta-wrap {

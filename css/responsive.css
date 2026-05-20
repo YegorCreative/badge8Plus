@@ -93,6 +93,102 @@ body.nav-menu-active {
   overflow: hidden;
 }
 
+/* Diff table: stacked card layout on mobile (< 768px) */
+@media (max-width: 767px) {
+  .diff-table thead {
+    display: none;
+  }
+
+  .diff-table,
+  .diff-table tbody,
+  .diff-table tr,
+  .diff-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .diff-table tr {
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    margin-bottom: var(--space-md);
+    box-shadow: var(--shadow-xs);
+  }
+
+  .diff-table td {
+    border-bottom: none;
+    padding: 0;
+  }
+
+  /* Metric name row — acts as card header */
+  .diff-table td:first-child {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    padding-bottom: var(--space-md);
+    margin-bottom: var(--space-md);
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  /* Comparison column cells — add label via ::before */
+  .diff-table td:nth-child(2),
+  .diff-table td:nth-child(3) {
+    padding-top: var(--space-sm);
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    line-height: 1.55;
+  }
+
+  .diff-table td:nth-child(2)::before {
+    content: "Conventional Agencies";
+    display: block;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-tertiary);
+    margin-bottom: var(--space-xs);
+  }
+
+  .diff-table td:nth-child(3) {
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--border-color);
+    margin-top: var(--space-sm);
+  }
+
+  .diff-table td:nth-child(3)::before {
+    content: "Badge 8";
+    display: block;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: var(--space-xs);
+  }
+}
+
+/* Extra small screens (< 480px): stack buttons and trim card padding */
+@media (max-width: 479px) {
+  .btn-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .btn-group .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .card {
+    padding: var(--space-lg);
+  }
+  .hero-headline {
+    font-size: clamp(1.85rem, 8vw, 2.4rem);
+  }
+}
+
 /* ==========================================================================
    Tablet (768px+)
    ========================================================================== */
