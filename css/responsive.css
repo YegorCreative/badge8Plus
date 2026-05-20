@@ -159,17 +159,18 @@ body.nav-menu-active {
     border-radius: var(--radius-lg);
   }
 
-  /* Problem: two-column split */
+  /* Problem: text-dominant two-column split (60/40) */
   .problem-inner {
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-4xl);
+    grid-template-columns: 1.4fr 1fr; /* Text column wider — quote is the primary content */
+    gap: var(--space-3xl);
     align-items: center;
   }
 
   .problem-media .visual-frame {
     display: block;
-    aspect-ratio: 3 / 4;
-    border-radius: var(--radius-lg);
+    aspect-ratio: 1 / 1;            /* Square — intimate editorial, not landscape hero */
+    border-radius: var(--radius-md);
+    max-width: none;
     margin-top: 0;
   }
 
