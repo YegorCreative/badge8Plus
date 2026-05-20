@@ -1,61 +1,69 @@
 /**
  * Badge 8 - Design System Variables
- * Defines the core color tokens, typography scales, spacing scales, and shadows
- * for the premium cinematic Badge 8 website.
+ * Phase: Hard Visual Reset — Modern / Apple-like / Clean
+ *
+ * Palette: clean whites, cool light grays, graphite text, 
+ *          slate blue-gray accent. Zero gold. Zero warm brown.
  */
 
 :root {
-  /* Color Palette - Premium Architectural Light System */
-  --bg-primary: #f4f3f0;      /* Warm sand plaster / atmospheric off-white */
-  --bg-secondary: #eae8e3;    /* Warm matte concrete / soft fog gray */
-  --bg-tertiary: #dfded9;     /* Deeper warm gray / structural shadow */
-  
-  --text-primary: #1e1d1a;    /* Restrained charcoal / deep graphite structure */
-  --text-secondary: #605e58;  /* Muted warm editorial gray for body and subheadings */
-  --text-tertiary: #929088;   /* Architectural sketch line gray for borders and captions */
+  /* ── Backgrounds: cool clean whites and grays ── */
+  --bg-primary:    #f9f9fb;   /* Near-white with a whisper of cool */
+  --bg-secondary:  #f2f2f5;   /* Light cool gray — cards, alternating sections */
+  --bg-tertiary:   #e6e6ea;   /* Soft structural divider gray */
+  --bg-dark:       #111116;   /* Deep graphite — footer only */
 
-  /* Accent Color - Matte Bronze/Champagne Gold */
-  --accent-gold: hsl(36, 16%, 38%);         /* Elegant, highly legible architectural bronze */
-  --accent-gold-rgb: 112, 99, 83;          /* HSL 36, 16%, 38% in RGB for overlays */
-  --accent-gold-glow: rgba(112, 99, 83, 0.08);
-  
-  /* Borders and Dividers */
-  --border-color: rgba(30, 29, 26, 0.08);
-  --border-color-hover: rgba(30, 29, 26, 0.16);
-  --border-gold: rgba(112, 99, 83, 0.25);
+  /* ── Text: clean graphite, cool-toned ── */
+  --text-primary:   #111116;  /* Near-black, clean cool graphite */
+  --text-secondary: #636370;  /* Readable mid-gray */
+  --text-tertiary:  #9898a5;  /* Light caption gray */
+  --text-inverse:   #f9f9fb;  /* White text on dark backgrounds */
 
-  /* Typography */
+  /* ── Accent: cool slate blue-gray (replaces all gold/bronze entirely) ── */
+  --accent:         hsl(215, 22%, 40%);  /* ≈ #4d6278 — modern slate blue-gray */
+  --accent-hover:   hsl(215, 22%, 32%);  /* Darker on hover */
+  --accent-light:   rgba(77, 98, 120, 0.07); /* Very faint tint for backgrounds */
+  --accent-border:  rgba(77, 98, 120, 0.20); /* Subtle accent border */
+
+  /* ── Borders: very clean, near-invisible ── */
+  --border-color:       rgba(0, 0, 0, 0.06);
+  --border-color-hover: rgba(0, 0, 0, 0.12);
+
+  /* ── Typography ── */
   --font-primary: "Inter", system-ui, -apple-system, sans-serif;
+  /* Instrument Serif kept but usage strictly limited to one hero word */
+  --font-serif: "Instrument Serif", Georgia, serif;
 
-  /* Spacing Scale (Fluid layout spaces) */
-  --space-xxs: 0.25rem;       /* 4px */
-  --space-xs: 0.5rem;         /* 8px */
-  --space-sm: 0.75rem;        /* 12px */
-  --space-md: 1rem;           /* 16px */
-  --space-lg: 1.5rem;         /* 24px */
-  --space-xl: 2rem;           /* 32px */
-  --space-2xl: 3rem;          /* 48px */
-  --space-3xl: 4rem;          /* 64px */
-  --space-4xl: 6rem;          /* 96px */
-  --space-5xl: 8rem;          /* 128px */
+  /* ── Spacing Scale ── */
+  --space-xxs: 0.25rem;
+  --space-xs:  0.5rem;
+  --space-sm:  0.75rem;
+  --space-md:  1rem;
+  --space-lg:  1.5rem;
+  --space-xl:  2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-4xl: 6rem;
+  --space-5xl: 8rem;
 
-  /* Border Radii */
-  --radius-sm: 4px;
-  --radius-md: 8px;
-  --radius-lg: 16px;
-  --radius-pill: 9999px;
+  /* ── Border Radii ── */
+  --radius-xs:   6px;
+  --radius-sm:   12px;   /* Chips, tags, icon boxes */
+  --radius-md:   20px;   /* Cards, panels */
+  --radius-lg:   28px;   /* Large visual frames */
+  --radius-pill: 9999px; /* Buttons — fully rounded */
 
-  /* Elevation & Cinematic Shadows */
-  --shadow-sm: 0 2px 12px rgba(30, 29, 26, 0.04);
-  --shadow-md: 0 8px 32px rgba(30, 29, 26, 0.06);
-  --shadow-lg: 0 16px 64px rgba(30, 29, 26, 0.08);
-  --shadow-glow: 0 0 40px rgba(112, 99, 83, 0.06);
+  /* ── Shadows: soft, clean, modern — no warmth ── */
+  --shadow-xs: 0 1px 3px rgba(0, 0, 0, 0.04);
+  --shadow-sm: 0 2px 12px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.03);
+  --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.07), 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.08), 0 4px 16px rgba(0, 0, 0, 0.04);
 
-  /* Z-Index Hierarchy */
-  --z-below: -1;
-  --z-base: 1;
-  --z-above: 10;
+  /* ── Z-Index ── */
+  --z-below:   -1;
+  --z-base:     1;
+  --z-above:   10;
   --z-header: 100;
   --z-overlay: 200;
-  --z-modal: 1000;
+  --z-modal:  1000;
 }

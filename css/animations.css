@@ -21,7 +21,7 @@
 @keyframes shrink-header {
   to {
     height: 64px;
-    background-color: rgba(244, 243, 240, 0.8); /* Light translucent target state */
+    background-color: rgba(249, 249, 251, 0.85); /* Clean cool white frost */
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-bottom-color: var(--border-color);

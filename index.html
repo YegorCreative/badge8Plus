@@ -9,19 +9,19 @@
   <meta name="description" content="Badge 8 builds cinematic clarity at the pace your business actually moves. Structured like infrastructure, designed for enterprise software.">
   <meta name="robots" content="index, follow">
   
-  <!-- Google Fonts Connection (Inter Exclusive) -->
+  <!-- Google Fonts — Inter (system) + Instrument Serif (cinematic accent, use sparingly) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   
-  <!-- Style Sheets (Linked in Logical Order with Cache Busting) -->
-  <link rel="stylesheet" href="css/variables.css?v=1.1">
-  <link rel="stylesheet" href="css/base.css?v=1.1">
-  <link rel="stylesheet" href="css/layout.css?v=1.1">
-  <link rel="stylesheet" href="css/components.css?v=1.1">
-  <link rel="stylesheet" href="css/sections.css?v=1.1">
-  <link rel="stylesheet" href="css/animations.css?v=1.1">
-  <link rel="stylesheet" href="css/responsive.css?v=1.1">
+  <!-- Style Sheets -->
+  <link rel="stylesheet" href="css/variables.css?v=1.3">
+  <link rel="stylesheet" href="css/base.css?v=1.3">
+  <link rel="stylesheet" href="css/layout.css?v=1.3">
+  <link rel="stylesheet" href="css/components.css?v=1.3">
+  <link rel="stylesheet" href="css/sections.css?v=1.3">
+  <link rel="stylesheet" href="css/animations.css?v=1.3">
+  <link rel="stylesheet" href="css/responsive.css?v=1.3">
 </head>
 <body>
 
@@ -64,14 +64,33 @@
       <div class="hero-glow-key"></div>
       <div class="hero-glow-ambient"></div>
       <div class="container">
-        <div class="hero-content animate-fade-in-up">
-          <span class="text-label">Cinematic Film Studio</span>
-          <h1 class="hero-headline">Your product moves industries.<br>Now your story can keep up.</h1>
-          <p class="hero-description">Cinematic clarity. Built like infrastructure. Premium storytelling tailored for enterprise software leaders.</p>
-          <div class="btn-group">
-            <a href="#cta" class="btn btn-primary" id="hero-btn-primary">Connect with the Studio</a>
-            <a href="#services" class="btn btn-outline" id="hero-btn-secondary">Explore Capabilities</a>
+        <div class="hero-inner">
+
+          <!-- Hero: Text Content -->
+          <div class="hero-content animate-fade-in-up">
+            <span class="text-label">Cinematic Film Studio</span>
+            <h1 class="hero-headline">Your product moves industries.<br>Now your <em class="cinematic-serif">story</em> can keep&nbsp;up.</h1>
+            <p class="hero-description">Cinematic clarity. Built like infrastructure. Premium storytelling tailored for enterprise software leaders.</p>
+            <div class="btn-group">
+              <a href="#cta" class="btn btn-primary" id="hero-btn-primary">Connect with the Studio</a>
+              <a href="#services" class="btn btn-outline" id="hero-btn-secondary">Explore Capabilities</a>
+            </div>
           </div>
+
+          <!-- Hero: Briefing Room Visual Placeholder -->
+          <div class="hero-media-showcase">
+            <div class="visual-frame">
+              <img
+                src="assets/images/hero_studio_clean.png"
+                alt="A bright, minimal modern studio with large windows and natural daylight — placeholder"
+                loading="eager"
+                width="1024"
+                height="768"
+              >
+            </div>
+            <p class="visual-caption">Placeholder &mdash; Studio Space</p>
+          </div>
+
         </div>
       </div>
     </section>
@@ -80,13 +99,34 @@
          3. Problem Statement Section
          ========================================== -->
     <section class="section-problem" id="problem">
-      <div class="container container-narrow">
+      <div class="container">
         <div class="problem-wrapper reveal">
-          <span class="text-label">The Conflict</span>
-          <blockquote class="problem-quote">
-            "Production at the pace your business actually moves."
-          </blockquote>
-          <p class="problem-meta">— The core mismatch in enterprise software media.</p>
+          <div class="problem-inner">
+
+            <!-- Problem: Editorial Quote -->
+            <div class="problem-text">
+              <span class="text-label">The Conflict</span>
+              <blockquote class="problem-quote">
+                &ldquo;Production at the pace your business actually moves.&rdquo;
+              </blockquote>
+              <p class="problem-meta">— The core mismatch in enterprise software media.</p>
+            </div>
+
+            <!-- Problem: Tactile Material Visual Placeholder -->
+            <div class="problem-media">
+              <div class="visual-frame">
+                <img
+                  src="assets/images/hero_studio_clean.png"
+                  alt="Bright modern architectural space with clean light — placeholder"
+                  loading="lazy"
+                  width="820"
+                  height="820"
+                >
+              </div>
+              <p class="visual-caption">Placeholder &mdash; Environment</p>
+            </div>
+
+          </div>
         </div>
       </div>
     </section>
@@ -202,39 +242,58 @@
           <h2>Designed like modern software engineering.</h2>
           <p>No endless exploratory meetings. We build films through structured, highly predictable sprints.</p>
         </div>
-        
-        <div class="process-steps">
-          <div class="process-step reveal">
-            <div class="process-num" aria-hidden="true">1</div>
-            <div class="process-detail">
-              <h3 class="process-step-title">Architectural Intake</h3>
-              <p>We review system schemas, code documentation, and primary product APIs to establish a factual technological baseline.</p>
+
+        <div class="process-inner">
+
+          <!-- Process: Step-by-step Documentation -->
+          <div class="process-steps">
+            <div class="process-step reveal">
+              <div class="process-num" aria-hidden="true">1</div>
+              <div class="process-detail">
+                <h3 class="process-step-title">Architectural Intake</h3>
+                <p>We review system schemas, code documentation, and primary product APIs to establish a factual technological baseline.</p>
+              </div>
+            </div>
+
+            <div class="process-step reveal">
+              <div class="process-num" aria-hidden="true">2</div>
+              <div class="process-detail">
+                <h3 class="process-step-title">Cinematic Storyboarding</h3>
+                <p>We build a complete visual blueprint containing script structures, composition grids, and initial timing markers.</p>
+              </div>
+            </div>
+
+            <div class="process-step reveal">
+              <div class="process-num" aria-hidden="true">3</div>
+              <div class="process-detail">
+                <h3 class="process-step-title">High-Fidelity Render</h3>
+                <p>Assets are textured, timed to professional dynamic scores, and compiled under clean studio standards.</p>
+              </div>
+            </div>
+
+            <div class="process-step reveal">
+              <div class="process-num" aria-hidden="true">4</div>
+              <div class="process-detail">
+                <h3 class="process-step-title">Deployment &amp; Iteration</h3>
+                <p>Delivered as modular assets designed for multiple formats, easily updated during subsequent product releases.</p>
+              </div>
             </div>
           </div>
-          
-          <div class="process-step reveal">
-            <div class="process-num" aria-hidden="true">2</div>
-            <div class="process-detail">
-              <h3 class="process-step-title">Cinematic Storyboarding</h3>
-              <p>We build a complete visual blueprint containing script structures, composition grids, and initial timing markers.</p>
+
+          <!-- Process: Studio Setup Visual Placeholder -->
+          <div class="process-visual">
+            <div class="visual-frame">
+              <img
+                src="assets/images/process_camera_clean.png"
+                alt="Professional cinema camera in a bright clean white studio — placeholder"
+                loading="lazy"
+                width="820"
+                height="1025"
+              >
             </div>
+            <p class="visual-caption">Placeholder &mdash; Studio Production</p>
           </div>
-          
-          <div class="process-step reveal">
-            <div class="process-num" aria-hidden="true">3</div>
-            <div class="process-detail">
-              <h3 class="process-step-title">High-Fidelity Render</h3>
-              <p>Assets are textured, timed to professional dynamic scores, and compiled under clean studio standards.</p>
-            </div>
-          </div>
-          
-          <div class="process-step reveal">
-            <div class="process-num" aria-hidden="true">4</div>
-            <div class="process-detail">
-              <h3 class="process-step-title">Deployment & Iteration</h3>
-              <p>Delivered as modular assets designed for multiple formats, easily updated during subsequent product releases.</p>
-            </div>
-          </div>
+
         </div>
       </div>
     </section>

@@ -1,39 +1,49 @@
 /**
- * Badge 8 - Section Specific Layouts
- * Outlines the structural configuration for each specific section block on the homepage
+ * Badge 8 - Section Layouts
+ * Phase: Hard Visual Reset — Modern / Apple-like / Clean
+ *
+ * Hero: bright cool-white gradient, no warm amber glows
+ * Sections: alternating clean whites and light grays
+ * Gold: fully removed from all section-level elements
  */
 
 /* ==========================================================================
-   1. Hero Section
+   1. Hero Section — bright, clean, modern
    ========================================================================== */
 .section-hero {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding-top: 140px; /* Account for fixed top navigation header */
+  padding-top: 140px;
   padding-bottom: var(--space-4xl);
   overflow: hidden;
-  background: radial-gradient(circle at 50% 50%, #f9f8f6 0%, #eae8e3 100%); /* Architectural gallery lighting */
+  /* Bright, airy gradient — no warmth, no amber */
+  background: linear-gradient(160deg, #ffffff 0%, #f4f4f8 50%, #eeeef3 100%);
   position: relative;
 }
 
+/* Very faint architectural grid — cleaner lines */
 .hero-grid-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: 
-    linear-gradient(rgba(30, 29, 26, 0.018) 1px, transparent 1px), /* Faint architectural sketch blueprint lines */
-    linear-gradient(90deg, rgba(30, 29, 26, 0.018) 1px, transparent 1px);
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.025) 1px, transparent 1px);
   background-size: 80px 80px;
-  background-position: center;
   pointer-events: none;
   z-index: var(--z-below);
 }
 
+/* Hero two-column: text left, image right */
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3xl);
+  align-items: center;
+  width: 100%;
+}
+
 .hero-content {
-  max-width: 800px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -43,82 +53,114 @@
 }
 
 .hero-headline {
-  font-size: clamp(2.8rem, 6.5vw, 4.8rem);
-  font-weight: 500; /* Refined executive medium weight */
-  line-height: 1.15;
+  font-size: clamp(2.6rem, 6vw, 4.4rem);
+  font-weight: 500;
+  line-height: 1.1;
   color: var(--text-primary);
-  letter-spacing: -0.02em; /* Tight tracking for hero scale */
-  max-width: 760px; /* Constrained for perfect visual breaks */
+  letter-spacing: -0.025em;
+  max-width: 720px;
+}
+
+/* Single italic serif word — clean modern emphasis */
+.hero-headline .cinematic-serif {
+  font-size: 1.05em;
+  color: var(--text-primary);
 }
 
 .hero-description {
-  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
   color: var(--text-secondary);
-  line-height: 1.6; /* Calmer vertical breath */
-  max-width: 560px; /* Optimized typographical measure (60-70 characters) */
-  margin-bottom: var(--space-lg); /* Expanded spacing before buttons */
+  line-height: 1.7;
+  max-width: 500px;
 }
 
-/* Background Atmosphere Glows - Multi-layered Optical Depth */
+/* Hero media showcase */
+.hero-media-showcase {
+  display: none;
+  z-index: var(--z-above);
+}
+
+.hero-media-showcase .visual-frame {
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-lg);
+}
+
+/* Soft accent glow — cool blue-gray, no amber */
 .hero-glow-key {
   position: absolute;
   top: -20%;
   right: -10%;
-  width: 80vw;
-  height: 80vh;
-  background: radial-gradient(circle at 75% 25%, rgba(245, 230, 210, 0.4) 0%, rgba(244, 243, 240, 0) 70%); /* Natural sunlight leak */
+  width: 65vw;
+  height: 65vh;
+  background: radial-gradient(circle at 70% 30%,
+    rgba(180, 195, 215, 0.22) 0%,
+    transparent 65%);
   z-index: var(--z-below);
   pointer-events: none;
-  animation: light-drift 45s linear infinite;
-  will-change: transform, opacity;
+  animation: light-drift 60s linear infinite;
+  will-change: transform;
 }
 
 .hero-glow-ambient {
   position: absolute;
   bottom: -10%;
   left: -10%;
-  width: 60vw;
-  height: 60vh;
-  background: radial-gradient(circle at 20% 80%, rgba(234, 232, 227, 0.6) 0%, rgba(244, 243, 240, 0) 65%); /* Soft ambient gallery glow */
+  width: 50vw;
+  height: 50vh;
+  background: radial-gradient(circle at 20% 80%,
+    rgba(200, 205, 220, 0.18) 0%,
+    transparent 60%);
   z-index: var(--z-below);
   pointer-events: none;
 }
 
 /* ==========================================================================
-   2. Problem Statement
+   2. Problem Statement — clean editorial
    ========================================================================== */
 .section-problem {
   background-color: var(--bg-primary);
   border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
-  padding-top: var(--space-5xl); /* Expanded padding for cinematic breathing pause */
+  padding-top: var(--space-5xl);
   padding-bottom: var(--space-5xl);
 }
 
 .problem-wrapper {
-  max-width: 760px; /* Refined measure to match text flow */
-  margin: 0 auto;
+  max-width: 100%;
 }
 
+.problem-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3xl);
+  align-items: center;
+}
+
+/* Quote in Inter — clean, modern, not sermon-like */
 .problem-quote {
   font-family: var(--font-primary);
-  font-size: clamp(1.6rem, 3.5vw, 2.5rem);
-  font-weight: 500;
-  line-height: 1.4;
+  font-size: clamp(1.55rem, 3vw, 2.35rem);
+  font-weight: 300;             /* Light weight — spacious, modern, not heavy */
+  line-height: 1.5;
   color: var(--text-primary);
-  letter-spacing: -0.01em; /* Subtle tight tracking for large quotes */
-  margin-bottom: var(--space-xl);
+  letter-spacing: -0.015em;
+  margin-bottom: var(--space-lg);
 }
 
 .problem-meta {
-  font-size: 0.9rem;
-  letter-spacing: 0.05em;
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
   color: var(--text-tertiary);
   text-transform: uppercase;
 }
 
+.problem-media .visual-frame {
+  aspect-ratio: 3 / 4;
+  display: none;
+}
+
 /* ==========================================================================
-   3. What Badge 8 Does (Services)
+   3. Services Section
    ========================================================================== */
 .section-services {
   background-color: var(--bg-secondary);
@@ -126,7 +168,7 @@
 
 .section-header {
   margin-bottom: var(--space-3xl);
-  max-width: 580px; /* Constrained typographic measure for balanced reading */
+  max-width: 560px;
 }
 
 .section-header h2 {
@@ -135,7 +177,7 @@
 
 .section-header p {
   color: var(--text-secondary);
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 /* ==========================================================================
@@ -150,13 +192,15 @@
   height: 100%;
 }
 
+/* Advantage numbers — clean graphite whisper, no gold/bronze */
 .advantage-number {
   font-family: var(--font-primary);
-  font-size: 2.5rem;
-  font-weight: 400; /* Muted lightweight numbering */
-  color: rgba(112, 99, 83, 0.25); /* Restrained bronze numbering color */
+  font-size: 2rem;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.10);   /* Near invisible — structural only */
   line-height: 1;
   margin-bottom: var(--space-md);
+  letter-spacing: -0.03em;
 }
 
 /* ==========================================================================
@@ -169,7 +213,7 @@
 .use-case-item {
   display: flex;
   flex-direction: column;
-  gap: var(--space-lg);
+  gap: var(--space-md);
   padding: var(--space-xl) 0;
   border-bottom: 1px solid var(--border-color);
 }
@@ -179,29 +223,35 @@
 }
 
 .use-case-title {
-  font-family: var(--font-primary);
-  font-size: 1.35rem;
-  font-weight: 500; /* Muted weights */
+  font-size: 1.2rem;
+  font-weight: 500;
   color: var(--text-primary);
+  letter-spacing: -0.01em;
 }
 
 /* ==========================================================================
-   6. Process
+   6. Process Section — steps + visual split
    ========================================================================== */
 .section-process {
   background-color: var(--bg-primary);
 }
 
+.process-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3xl);
+  align-items: start;
+}
+
 .process-steps {
   display: flex;
   flex-direction: column;
-  gap: var(--space-xl);
-  position: relative;
+  gap: var(--space-lg);
 }
 
 .process-step {
   display: flex;
-  gap: var(--space-xl);
+  gap: var(--space-lg);
   padding-bottom: var(--space-xl);
   border-bottom: 1px solid var(--border-color);
   align-items: flex-start;
@@ -212,35 +262,50 @@
   padding-bottom: 0;
 }
 
+/* Step number chip — clean modern, no gold */
 .process-num {
-  font-size: 0.9rem;
-  font-weight: 500; /* Restrained weight */
-  color: var(--accent-gold);
-  border: 1px solid var(--border-gold);
-  border-radius: var(--radius-sm);
-  width: 32px;
-  height: 32px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);  /* 12px */
+  width: 28px;
+  height: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  background-color: rgba(112, 99, 83, 0.08); /* Sophisticated bronze badge background */
+  background-color: var(--bg-secondary);
+  letter-spacing: 0;
 }
 
 .process-detail {
   display: flex;
   flex-direction: column;
   gap: var(--space-xs);
+  padding-top: 3px;
 }
 
 .process-step-title {
-  font-size: 1.15rem;
-  font-weight: 500; /* Clean medium weight */
+  font-size: 1.05rem;
+  font-weight: 500;
   color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+/* Process visual panel */
+.process-visual {
+  display: none;
+}
+
+.process-visual .visual-frame {
+  aspect-ratio: 4 / 5;
+  position: sticky;
+  top: 120px;
 }
 
 /* ==========================================================================
-   7. Differentiation
+   7. Differentiation Table
    ========================================================================== */
 .section-differentiation {
   background-color: var(--bg-secondary);
@@ -260,24 +325,28 @@
 }
 
 .diff-table th {
-  font-size: 0.8rem;
-  font-weight: 500; /* Spacious small-cap titles */
+  font-size: 0.75rem;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.15em; /* Extremely spacious tracking */
+  letter-spacing: 0.12em;
   color: var(--text-primary);
+  background-color: var(--bg-tertiary);
 }
 
 .diff-table td {
-  font-size: 0.95rem;
+  font-size: 0.93rem;
   color: var(--text-secondary);
+  line-height: 1.55;
 }
 
+/* Badge 8 column — clean graphite bold, no gold */
 .diff-table td strong {
-  color: var(--accent-gold);
+  color: var(--text-primary);
+  font-weight: 500;
 }
 
 /* ==========================================================================
-   8. Final Call to Action
+   8. Call to Action — clean, centered, minimal
    ========================================================================== */
 .section-cta {
   background-color: var(--bg-primary);
@@ -287,7 +356,7 @@
 }
 
 .cta-wrap {
-  max-width: 700px;
+  max-width: 640px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -296,15 +365,16 @@
 }
 
 .cta-headline {
-  font-size: clamp(2rem, 4.5vw, 3.2rem);
-  font-weight: 500; /* Retain premium executive weight */
+  font-size: clamp(1.9rem, 4vw, 3rem);
+  font-weight: 500;
   color: var(--text-primary);
-  line-height: 1.25;
-  letter-spacing: -0.02em; /* Tight tracking for call to action */
+  line-height: 1.15;
+  letter-spacing: -0.025em;
 }
 
 .cta-description {
-  font-size: 1.125rem;
+  font-size: 1.05rem;
   color: var(--text-secondary);
-  margin-bottom: var(--space-md);
+  line-height: 1.65;
+  max-width: 480px;
 }

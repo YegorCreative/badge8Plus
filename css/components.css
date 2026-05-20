@@ -1,162 +1,219 @@
 /**
  * Badge 8 - Premium UI Components
- * Defines buttons, glassmorphic cards, badges, and shared UI assets
+ * Phase: Hard Visual Reset — Modern / Apple-like / Clean
+ *
+ * Buttons: pill radius, soft shadow, clean graphite/slate
+ * Cards: cool light glass, no gold rings
+ * Labels: graphite tracking, no gold
  */
 
-/* 1. Buttons */
+/* ── 1. Base Button ── */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: 0.75rem 1.75rem;
   font-family: var(--font-primary);
-  font-size: 0.85rem;
+  font-size: 0.84rem;
   font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  border-radius: var(--radius-sm);
-  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  letter-spacing: 0.04em;
+  text-transform: none;         /* Remove ALL_CAPS — more modern/Apple */
+  border-radius: var(--radius-pill); /* Fully rounded — Apple pill buttons */
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   position: relative;
-  overflow: hidden;
   white-space: nowrap;
-  box-shadow: none; /* Architectural flat restraint */
+  cursor: pointer;
 }
 
-/* Primary Understated Accent Button */
+/* ── Primary: clean graphite, white text, soft shadow ── */
 .btn-primary {
-  background-color: var(--accent-gold);
-  color: var(--bg-primary);
-  border: 1px solid var(--accent-gold);
+  background-color: var(--text-primary); /* Deep graphite */
+  color: var(--text-inverse);
+  border: 1px solid var(--text-primary);
+  box-shadow: var(--shadow-sm);
 }
 
 .btn-primary:hover {
-  background-color: var(--text-primary);
-  border-color: var(--text-primary);
-  color: var(--bg-primary);
-  box-shadow: none; /* Guaranteed zero shadows */
+  background-color: #2a2a32;
+  border-color: #2a2a32;
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
 }
 
-/* Secondary Refined Outline Button */
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-xs);
+}
+
+/* ── Outline: clean border, no fill, pill shape ── */
 .btn-outline {
   background-color: transparent;
   color: var(--text-primary);
   border: 1px solid var(--border-color-hover);
+  box-shadow: none;
 }
 
 .btn-outline:hover {
-  border-color: var(--accent-gold);
-  color: var(--text-primary);
-  background-color: rgba(30, 29, 26, 0.03); /* Subtle value shift (physical tactile press) */
-  box-shadow: none; /* Guaranteed zero shadows */
+  background-color: var(--bg-secondary);
+  border-color: var(--border-color-hover);
+  box-shadow: var(--shadow-xs);
+  transform: translateY(-1px);
 }
 
-/* Text-Only Link Button */
+/* ── Text Link Button ── */
 .btn-text {
   padding: var(--space-xs) 0;
   color: var(--text-primary);
-  font-size: 0.85rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  font-size: 0.84rem;
+  font-weight: 500;
   display: inline-flex;
   align-items: center;
   gap: var(--space-xs);
+  letter-spacing: 0.01em;
 }
 
 .btn-text::after {
   content: '→';
-  transition: transform 0.3s ease;
+  transition: transform 0.25s ease;
 }
 
 .btn-text:hover::after {
   transform: translateX(4px);
 }
 
-/* 2. Glassmorphic Cinematic Cards */
+/* ── 2. Cards ── */
 .card {
-  background-color: var(--bg-secondary);
+  background-color: var(--bg-primary);
   border: 1px solid var(--border-color);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-md);  /* 20px */
   padding: var(--space-xl);
-  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), 
-              border-color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), 
-              box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-  box-shadow: var(--shadow-sm);
+  transition: transform 0.35s cubic-bezier(0.25, 0.8, 0.25, 1),
+              border-color 0.35s ease,
+              box-shadow 0.35s ease;
+  box-shadow: var(--shadow-xs);
   display: flex;
   flex-direction: column;
   gap: var(--space-md);
 }
 
 .card:hover {
-  transform: translateY(-2px); /* Subtly grounded lift */
+  transform: translateY(-3px);
   border-color: var(--border-color-hover);
   box-shadow: var(--shadow-md);
 }
 
-/* Premium Transparent Blur Card */
+/* Glass card — luminous, cool white translucency */
 .card-glass {
-  background-color: rgba(255, 255, 255, 0.45); /* Translucent warm off-white */
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-color: var(--border-color);
+  background-color: rgba(255, 255, 255, 0.70);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-color: rgba(255, 255, 255, 0.8);
 }
 
 .card-glass:hover {
-  border-color: var(--border-gold);
-  box-shadow: var(--shadow-glow);
+  border-color: var(--border-color-hover);
+  box-shadow: var(--shadow-md);
+  background-color: rgba(255, 255, 255, 0.85);
 }
 
+/* Icon box */
 .card-icon {
-  width: 48px;
-  height: 48px;
-  border-radius: var(--radius-sm);
-  background-color: rgba(30, 29, 26, 0.03); /* Dark tactile inline circle */
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);  /* 12px */
+  background-color: var(--bg-secondary);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--accent-gold);
+  color: var(--text-secondary);
   border: 1px solid var(--border-color);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
 }
 
 .card-title {
   font-family: var(--font-primary);
-  font-size: 1.15rem;
-  font-weight: 500; /* Replaced 600 to keep visual calm */
+  font-size: 1.05rem;
+  font-weight: 500;
   color: var(--text-primary);
+  line-height: 1.3;
 }
 
 .card-body {
-  font-size: 0.95rem;
+  font-size: 0.93rem;
   color: var(--text-secondary);
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
-/* 3. Badges */
+/* ── 3. Badges / Tags ── */
 .badge {
   display: inline-flex;
   align-items: center;
-  padding: 0.35rem 0.85rem;
+  padding: 0.3rem 0.85rem;
   font-size: 0.7rem;
-  font-weight: 500; /* Replaced 600 */
-  letter-spacing: 0.18em; /* Spaced tracking for small caps */
+  font-weight: 500;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--accent-gold);
-  background-color: rgba(112, 99, 83, 0.08); /* Sophisticated bronze backdrop */
-  border: 1px solid var(--border-gold);
+  color: var(--text-secondary);
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
   border-radius: var(--radius-pill);
   width: fit-content;
 }
 
-/* 4. Button Grouping Wrapper */
+/* ── 4. Button Group ── */
 .btn-group {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-md);
+  gap: var(--space-sm);
   margin-top: var(--space-lg);
 }
 
-/* 5. Decorative Line separator */
+/* ── 5. Divider ── */
 .divider-line {
   height: 1px;
   background-color: var(--border-color);
   width: 100%;
+}
+
+/* ── 6. Cinematic Serif — hero only ── */
+.cinematic-serif {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* ── 7. Visual Placeholder Frame ── */
+.visual-frame {
+  border-radius: var(--radius-lg);  /* 28px */
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-md);
+  position: relative;
+  background-color: var(--bg-secondary);
+  line-height: 0;
+}
+
+.visual-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.7s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.visual-frame:hover img {
+  transform: scale(1.02);
+}
+
+/* Visual caption label */
+.visual-caption {
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  margin-top: var(--space-xs);
+  padding-left: 2px;
+  font-family: var(--font-primary);
 }

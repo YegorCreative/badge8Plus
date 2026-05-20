@@ -17,7 +17,7 @@ ol, ul {
 
 /* Remove default focus outlines but preserve accessibility */
 *:focus-visible {
-  outline: 2px solid var(--accent-gold);
+  outline: 2px solid var(--accent);
   outline-offset: 4px;
 }
 
@@ -73,14 +73,14 @@ p {
   letter-spacing: 0.01em;
 }
 
-/* Subheadings / Labels */
+/* Subheadings / Labels — clean graphite, no gold */
 .text-label {
   font-family: var(--font-primary);
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   text-transform: uppercase;
-  letter-spacing: 0.25em; /* Wide tracking for eyebrow/labels */
-  color: var(--accent-gold);
-  font-weight: 500; /* Lighter weight for subtle premium feel */
+  letter-spacing: 0.18em;
+  color: var(--text-tertiary);
+  font-weight: 500;
   display: inline-block;
   margin-bottom: var(--space-md);
 }
@@ -114,6 +114,6 @@ button {
 
 /* Custom Selection style */
 ::selection {
-  background-color: var(--accent-gold-glow);
+  background-color: rgba(77, 98, 120, 0.12);
   color: var(--text-primary);
 }

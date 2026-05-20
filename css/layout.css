@@ -62,12 +62,12 @@ section {
   will-change: background-color, border-color, height;
 }
 
-/* Scrolled Header State (Controlled via CSS or JS fallback) */
+/* Scrolled Header State */
 .site-header.scrolled {
   height: 64px;
-  background-color: rgba(244, 243, 240, 0.75); /* Light blur backdrop */
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background-color: rgba(249, 249, 251, 0.82); /* Clean cool white frost */
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border-bottom-color: var(--border-color);
 }
 
@@ -110,7 +110,7 @@ section {
   left: 0;
   width: 100%;
   height: 1px;
-  background-color: var(--accent-gold);
+  background-color: var(--accent);   /* Cool slate blue-gray underline */
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -146,13 +146,13 @@ section {
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* 5. Footer Structure */
+/* 5. Footer Structure — clean cool graphite dark */
 .site-footer {
-  background-color: #1e1d1a; /* Restrained charcoal graphite grounding block */
-  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  background-color: var(--bg-dark);   /* Deep graphite — defined in variables */
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
   padding-top: var(--space-4xl);
   padding-bottom: var(--space-2xl);
-  color: #929088; /* Soft warm gray typography for dark background */
+  color: #8888a0;
 }
 
 .site-footer .footer-grid {
@@ -170,7 +170,7 @@ section {
 
 .site-footer .footer-description {
   max-width: 320px;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
 }
 
 .site-footer .footer-links-group {
@@ -180,11 +180,11 @@ section {
 }
 
 .site-footer .footer-title {
-  font-size: 0.8rem;
-  font-weight: 500; /* Muted weights */
+  font-size: 0.75rem;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.15em; /* Extremely spacious tracking */
-  color: #faf9f6; /* Warm off-white typography for titles */
+  letter-spacing: 0.14em;
+  color: #e8e8f0;    /* Clean cool off-white */
   margin-bottom: var(--space-lg);
 }
 
@@ -195,20 +195,20 @@ section {
 }
 
 .site-footer .footer-link {
-  font-size: 0.9rem;
-  color: #929088; /* Elegant matching warm gray links */
+  font-size: 0.88rem;
+  color: #8888a0;
 }
 
 .site-footer .footer-link:hover {
-  color: #faf9f6; /* Warm off-white high contrast hover */
+  color: #e8e8f0;
 }
 
 .site-footer .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
   padding-top: var(--space-xl);
   display: flex;
   flex-direction: column;
   gap: var(--space-md);
-  font-size: 0.8rem;
-  color: #605e58; /* Muted warm caption gray */
+  font-size: 0.78rem;
+  color: #5a5a72;
 }
