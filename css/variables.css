@@ -5,24 +5,24 @@
  */
 
 :root {
-  /* Color Palette - Premium Cinematic Dark Mode */
-  --bg-primary: #080808;      /* Pure black base with subtle warm undertone */
-  --bg-secondary: #121212;    /* Slate charcoal for cards and secondary panels */
-  --bg-tertiary: #1a1a1a;     /* Lighter charcoal for subtle hover zones */
+  /* Color Palette - Premium Architectural Light System */
+  --bg-primary: #f4f3f0;      /* Warm sand plaster / atmospheric off-white */
+  --bg-secondary: #eae8e3;    /* Warm matte concrete / soft fog gray */
+  --bg-tertiary: #dfded9;     /* Deeper warm gray / structural shadow */
   
-  --text-primary: #f5f5f7;    /* Off-white, soft high-contrast text (Apple style) */
-  --text-secondary: #9e9e9f;  /* Cool muted gray for subheadings and body copy */
-  --text-tertiary: #666668;   /* Muted gray for captions and borders */
+  --text-primary: #1e1d1a;    /* Restrained charcoal / deep graphite structure */
+  --text-secondary: #605e58;  /* Muted warm editorial gray for body and subheadings */
+  --text-tertiary: #929088;   /* Architectural sketch line gray for borders and captions */
 
-  /* Accent Color - Restrained Cinematic Warmth */
-  --accent-gold: hsl(36, 32%, 64%);         /* Premium muted bronze/champagne gold */
-  --accent-gold-rgb: 195, 176, 145;         /* HSL 36, 32%, 64% in RGB for overlays */
-  --accent-gold-glow: rgba(195, 176, 145, 0.15);
+  /* Accent Color - Matte Bronze/Champagne Gold */
+  --accent-gold: hsl(36, 16%, 38%);         /* Elegant, highly legible architectural bronze */
+  --accent-gold-rgb: 112, 99, 83;          /* HSL 36, 16%, 38% in RGB for overlays */
+  --accent-gold-glow: rgba(112, 99, 83, 0.08);
   
   /* Borders and Dividers */
-  --border-color: rgba(255, 255, 255, 0.06);
-  --border-color-hover: rgba(255, 255, 255, 0.12);
-  --border-gold: rgba(195, 176, 145, 0.2);
+  --border-color: rgba(30, 29, 26, 0.08);
+  --border-color-hover: rgba(30, 29, 26, 0.16);
+  --border-gold: rgba(112, 99, 83, 0.25);
 
   /* Typography */
   --font-primary: "Inter", system-ui, -apple-system, sans-serif;
@@ -46,10 +46,10 @@
   --radius-pill: 9999px;
 
   /* Elevation & Cinematic Shadows */
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.5);
-  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.7);
-  --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.9);
-  --shadow-glow: 0 0 40px rgba(195, 176, 145, 0.05);
+  --shadow-sm: 0 2px 12px rgba(30, 29, 26, 0.04);
+  --shadow-md: 0 8px 32px rgba(30, 29, 26, 0.06);
+  --shadow-lg: 0 16px 64px rgba(30, 29, 26, 0.08);
+  --shadow-glow: 0 0 40px rgba(112, 99, 83, 0.06);
 
   /* Z-Index Hierarchy */
   --z-below: -1;

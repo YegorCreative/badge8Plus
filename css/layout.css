@@ -65,7 +65,7 @@ section {
 /* Scrolled Header State (Controlled via CSS or JS fallback) */
 .site-header.scrolled {
   height: 64px;
-  background-color: rgba(8, 8, 8, 0.75);
+  background-color: rgba(244, 243, 240, 0.75); /* Light blur backdrop */
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom-color: var(--border-color);
@@ -148,11 +148,11 @@ section {
 
 /* 5. Footer Structure */
 .site-footer {
-  background-color: #040404;
-  border-top: 1px solid var(--border-color);
+  background-color: #1e1d1a; /* Restrained charcoal graphite grounding block */
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
   padding-top: var(--space-4xl);
   padding-bottom: var(--space-2xl);
-  color: var(--text-secondary);
+  color: #929088; /* Soft warm gray typography for dark background */
 }
 
 .site-footer .footer-grid {
@@ -184,7 +184,7 @@ section {
   font-weight: 500; /* Muted weights */
   text-transform: uppercase;
   letter-spacing: 0.15em; /* Extremely spacious tracking */
-  color: var(--text-primary);
+  color: #faf9f6; /* Warm off-white typography for titles */
   margin-bottom: var(--space-lg);
 }
 
@@ -196,19 +196,19 @@ section {
 
 .site-footer .footer-link {
   font-size: 0.9rem;
-  color: var(--text-secondary);
+  color: #929088; /* Elegant matching warm gray links */
 }
 
 .site-footer .footer-link:hover {
-  color: var(--text-primary);
+  color: #faf9f6; /* Warm off-white high contrast hover */
 }
 
 .site-footer .footer-bottom {
-  border-top: 1px solid var(--border-color);
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
   padding-top: var(--space-xl);
   display: flex;
   flex-direction: column;
   gap: var(--space-md);
   font-size: 0.8rem;
-  color: var(--text-tertiary);
+  color: #605e58; /* Muted warm caption gray */
 }

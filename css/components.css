@@ -46,7 +46,7 @@
 .btn-outline:hover {
   border-color: var(--accent-gold);
   color: var(--text-primary);
-  background-color: rgba(255, 255, 255, 0.02); /* Subtle value shift */
+  background-color: rgba(30, 29, 26, 0.03); /* Subtle value shift (physical tactile press) */
   box-shadow: none; /* Guaranteed zero shadows */
 }
 
@@ -94,7 +94,7 @@
 
 /* Premium Transparent Blur Card */
 .card-glass {
-  background-color: rgba(18, 18, 18, 0.45);
+  background-color: rgba(255, 255, 255, 0.45); /* Translucent warm off-white */
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-color: var(--border-color);
@@ -109,7 +109,7 @@
   width: 48px;
   height: 48px;
   border-radius: var(--radius-sm);
-  background-color: rgba(255, 255, 255, 0.03);
+  background-color: rgba(30, 29, 26, 0.03); /* Dark tactile inline circle */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -140,7 +140,7 @@
   letter-spacing: 0.18em; /* Spaced tracking for small caps */
   text-transform: uppercase;
   color: var(--accent-gold);
-  background-color: rgba(195, 176, 145, 0.08);
+  background-color: rgba(112, 99, 83, 0.08); /* Sophisticated bronze backdrop */
   border: 1px solid var(--border-gold);
   border-radius: var(--radius-pill);
   width: fit-content;
