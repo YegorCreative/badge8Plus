@@ -41,7 +41,11 @@ badge8/
 
 ## 📹 Asset & Media Protocol
 
-To maintain premium performance, protect Largest Contentful Paint (LCP) speeds, and preserve the cinematic visual brand, all visual assets must adhere to the following technical and creative standards:
+To maintain premium performance, protect Largest Contentful Paint (LCP) speeds, and preserve the cinematic visual brand, all visual assets must adhere strictly to the guidelines defined in our core creative manual:
+
+*   **[Visual Direction System (VISUAL_DIRECTION.md)](file:///Users/yegorhambaryan/Documents/2026/WebDevelopement26/badge8Plus/badge8/VISUAL_DIRECTION.md)**: The definitive creative and composition blueprint detailing our "Operating System" posture, visual silence rules, camera guidelines, acceptable/forbidden imagery catalogs, and iconography specifications.
+
+All assets must conform to the following technical and creative standards:
 
 ### 1. Image Optimization & Formats
 * **Modern Formats**: Always prioritize modern next-gen image formats like **AVIF** and **WebP** for photographic content and diagrams. Reserve PNG/SVG strictly for logos and iconography.
