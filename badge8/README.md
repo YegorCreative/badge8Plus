@@ -44,6 +44,7 @@ badge8/
 To maintain premium performance, protect Largest Contentful Paint (LCP) speeds, and preserve the cinematic visual brand, all visual assets must adhere strictly to the guidelines defined in our core creative manual:
 
 *   **[Visual Direction System (VISUAL_DIRECTION.md)](file:///Users/yegorhambaryan/Documents/2026/WebDevelopement26/badge8Plus/badge8/VISUAL_DIRECTION.md)**: The definitive creative and composition blueprint detailing our "Operating System" posture, visual silence rules, camera guidelines, acceptable/forbidden imagery catalogs, and iconography specifications.
+*   **[Asset Strategy & Hero Plan (ASSET_STRATEGY.md)](file:///Users/yegorhambaryan/Documents/2026/WebDevelopement26/badge8Plus/badge8/ASSET_STRATEGY.md)**: The structural, optical, and kinetic asset planner detailing our multi-layered hero system, section-by-section visual storytelling map, motion hierarchy levels, and asset restaint parameters.
 
 All assets must conform to the following technical and creative standards:
 
