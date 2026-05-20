@@ -28,10 +28,10 @@
 
 .hero-headline {
   font-size: clamp(2.8rem, 6.5vw, 4.8rem);
-  font-weight: 700;
+  font-weight: 500; /* Refined executive medium weight */
   line-height: 1.15;
   color: var(--text-primary);
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em; /* Tight tracking for hero scale */
 }
 
 .hero-description {
@@ -75,7 +75,7 @@
   font-weight: 500;
   line-height: 1.4;
   color: var(--text-primary);
-  letter-spacing: 0.01em;
+  letter-spacing: -0.01em; /* Subtle tight tracking for large quotes */
   margin-bottom: var(--space-xl);
 }
 
@@ -121,7 +121,7 @@
 .advantage-number {
   font-family: var(--font-primary);
   font-size: 2.5rem;
-  font-weight: 700;
+  font-weight: 400; /* Muted lightweight numbering */
   color: rgba(195, 176, 145, 0.15);
   line-height: 1;
   margin-bottom: var(--space-md);
@@ -149,7 +149,7 @@
 .use-case-title {
   font-family: var(--font-primary);
   font-size: 1.35rem;
-  font-weight: 600;
+  font-weight: 500; /* Muted weights */
   color: var(--text-primary);
 }
 
@@ -182,7 +182,7 @@
 
 .process-num {
   font-size: 0.9rem;
-  font-weight: 700;
+  font-weight: 500; /* Restrained weight */
   color: var(--accent-gold);
   border: 1px solid var(--border-gold);
   border-radius: var(--radius-sm);
@@ -203,7 +203,7 @@
 
 .process-step-title {
   font-size: 1.15rem;
-  font-weight: 600;
+  font-weight: 500; /* Clean medium weight */
   color: var(--text-primary);
 }
 
@@ -229,9 +229,9 @@
 
 .diff-table th {
   font-size: 0.8rem;
-  font-weight: 600;
+  font-weight: 500; /* Spacious small-cap titles */
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.15em; /* Extremely spacious tracking */
   color: var(--text-primary);
 }
 
@@ -265,9 +265,10 @@
 
 .cta-headline {
   font-size: clamp(2rem, 4.5vw, 3.2rem);
-  font-weight: 700;
+  font-weight: 500; /* Retain premium executive weight */
   color: var(--text-primary);
   line-height: 1.25;
+  letter-spacing: -0.02em; /* Tight tracking for call to action */
 }
 
 .cta-description {

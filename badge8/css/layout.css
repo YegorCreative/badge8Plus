@@ -81,9 +81,9 @@ section {
 /* Logo placement */
 .site-logo {
   font-family: var(--font-primary);
-  font-weight: 700;
+  font-weight: 500; /* Lighter weight logo mark */
   font-size: 1.25rem;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.2em; /* Extremely spacious tracking */
   color: var(--text-primary);
   text-transform: uppercase;
 }
@@ -96,8 +96,8 @@ section {
 
 .nav-link {
   font-size: 0.85rem;
-  font-weight: 500;
-  letter-spacing: 0.05em;
+  font-weight: 400; /* Calm light-medium weight */
+  letter-spacing: 0.08em; /* Spacious tracking */
   color: var(--text-secondary);
   position: relative;
   padding: var(--space-xs) 0;
@@ -181,9 +181,9 @@ section {
 
 .site-footer .footer-title {
   font-size: 0.8rem;
-  font-weight: 600;
+  font-weight: 500; /* Muted weights */
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.15em; /* Extremely spacious tracking */
   color: var(--text-primary);
   margin-bottom: var(--space-lg);
 }

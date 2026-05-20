@@ -39,6 +39,30 @@ badge8/
 
 ---
 
+## 📹 Asset & Media Protocol
+
+To maintain premium performance, protect Largest Contentful Paint (LCP) speeds, and preserve the cinematic visual brand, all visual assets must adhere to the following technical and creative standards:
+
+### 1. Image Optimization & Formats
+* **Modern Formats**: Always prioritize modern next-gen image formats like **AVIF** and **WebP** for photographic content and diagrams. Reserve PNG/SVG strictly for logos and iconography.
+* **Lossless SVG Optimization**: Run all vector SVGs through an optimization pass (e.g., SVGO) to strip metadata, editor comments, and unnecessary nodes before deployment.
+* **Responsive Sizing**: Provide source files cropped to exact layout constraints. Avoid loading over-dimensioned imagery for small components.
+
+### 2. Video Performance & Compression
+* **Target Codecs**: Use high-efficiency container formats—specifically **WebM (VP9/AV1)** and highly compressed **MP4 (H.264)**—for web playback.
+* **Background Loops**: Restrict background video loops to short durations (under 10 seconds), muted by default, and compressed with low bitrates (targeting <1MB).
+* **Autoplay Restraint**: Avoid heavy visual autoplay unless critical to the user experience. All looping video tags must include `muted playsinline autoplay loop` and use the CSS `content-visibility: auto` property on offscreen loops to protect mobile CPU cycles.
+
+### 3. Core Web Vitals & LCP Protection
+* **Explicit Dimensions**: Always define `width` and `height` attributes on HTML image and video elements to prevent Layout Shifts (CLS).
+* **Priority Loading**: Apply `fetchpriority="high"` and `loading="eager"` exclusively to critical hero visual assets (LCP candidates), while using native lazy-loading (`loading="lazy"`) for all offscreen content.
+
+### 4. Brand-Aligned Creative Direction
+* **Cinematic Dark Tones**: Maintain low-exposure, high-contrast imagery with dark slate and cool gray bases. Visuals should emphasize structural systems and cinematic lighting.
+* **Restrained Composition**: Avoid cluttered layouts, generic tech stock photography, cartoon illustrations, or bright, saturated gradients. Every asset must feel calm, intentional, and enterprise-grade.
+
+---
+
 ## ⚙️ Core Technical Features
 
 ### 1. Pure CSS Scroll-Driven Animations
