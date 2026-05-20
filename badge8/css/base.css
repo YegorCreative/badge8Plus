@@ -1,0 +1,115 @@
+/**
+ * Badge 8 - Base Styles & Reset
+ * Implements a modern CSS reset and establishes global typographic defaults
+ */
+
+/* 1. Global Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove default list styles */
+ol, ul {
+  list-style: none;
+}
+
+/* Remove default focus outlines but preserve accessibility */
+*:focus-visible {
+  outline: 2px solid var(--accent-gold);
+  outline-offset: 4px;
+}
+
+/* 2. Global Document Overrides */
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-size: 16px; /* Core scale base */
+  
+  /* High-end Font Smoothing */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--bg-primary);
+  color: var(--text-secondary);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* 3. Typography Defaults */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-primary);
+  color: var(--text-primary);
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4.5rem); /* Responsive fluid typography */
+}
+
+h2 {
+  font-size: clamp(1.8rem, 3.5vw, 3rem);
+  letter-spacing: 0.03em;
+}
+
+h3 {
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+}
+
+p {
+  font-size: clamp(0.95rem, 1.2vw, 1.125rem);
+  color: var(--text-secondary);
+  letter-spacing: 0.01em;
+}
+
+/* Subheadings / Labels */
+.text-label {
+  font-family: var(--font-primary);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: var(--accent-gold);
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: var(--space-md);
+}
+
+/* 4. Links */
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+a:hover {
+  color: var(--text-primary);
+}
+
+/* 5. Media & Embeds */
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 6. Buttons Reset */
+button {
+  background: none;
+  border: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+/* Custom Selection style */
+::selection {
+  background-color: var(--accent-gold-glow);
+  color: var(--text-primary);
+}

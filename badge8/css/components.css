@@ -1,0 +1,160 @@
+/**
+ * Badge 8 - Premium UI Components
+ * Defines buttons, glassmorphic cards, badges, and shared UI assets
+ */
+
+/* 1. Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.75rem;
+  font-family: var(--font-primary);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: var(--radius-sm);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* Primary Understated Accent Button */
+.btn-primary {
+  background-color: var(--accent-gold);
+  color: var(--bg-primary);
+  border: 1px solid var(--accent-gold);
+}
+
+.btn-primary:hover {
+  background-color: var(--text-primary);
+  border-color: var(--text-primary);
+  color: var(--bg-primary);
+  box-shadow: 0 0 24px rgba(255, 255, 255, 0.1);
+}
+
+/* Secondary Refined Outline Button */
+.btn-outline {
+  background-color: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border-color-hover);
+}
+
+.btn-outline:hover {
+  border-color: var(--accent-gold);
+  color: var(--text-primary);
+  box-shadow: var(--shadow-glow);
+}
+
+/* Text-Only Link Button */
+.btn-text {
+  padding: var(--space-xs) 0;
+  color: var(--text-primary);
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.btn-text::after {
+  content: '→';
+  transition: transform 0.3s ease;
+}
+
+.btn-text:hover::after {
+  transform: translateX(4px);
+}
+
+/* 2. Glassmorphic Cinematic Cards */
+.card {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: var(--space-xl);
+  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), 
+              border-color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), 
+              box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-color-hover);
+  box-shadow: var(--shadow-md);
+}
+
+/* Premium Transparent Blur Card */
+.card-glass {
+  background-color: rgba(18, 18, 18, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-color: var(--border-color);
+}
+
+.card-glass:hover {
+  border-color: var(--border-gold);
+  box-shadow: var(--shadow-glow);
+}
+
+.card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-sm);
+  background-color: rgba(255, 255, 255, 0.03);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-gold);
+  border: 1px solid var(--border-color);
+}
+
+.card-title {
+  font-family: var(--font-primary);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.card-body {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* 3. Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.85rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  background-color: rgba(195, 176, 145, 0.08);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-pill);
+  width: fit-content;
+}
+
+/* 4. Button Grouping Wrapper */
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+}
+
+/* 5. Decorative Line separator */
+.divider-line {
+  height: 1px;
+  background-color: var(--border-color);
+  width: 100%;
+}

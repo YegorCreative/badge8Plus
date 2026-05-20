@@ -1,0 +1,101 @@
+/**
+ * Badge 8 - High-performance Transitions & Keyframe Animations
+ * Configures modern scroll timeline triggers, entrance animations, and high-performance hover states.
+ */
+
+/* 1. Core Transitions */
+.transition-smooth {
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* 2. Scroll-Driven CSS Animation for Fixed Header */
+@supports ((animation-timeline: scroll()) and (animation-range: 0% 100%)) {
+  .site-header {
+    /* Bind the header shrinking directly to the page's vertical scrolling position */
+    animation: shrink-header auto linear both;
+    animation-timeline: scroll(block root);
+    animation-range: 0px 100px;
+  }
+}
+
+@keyframes shrink-header {
+  to {
+    height: 64px;
+    background-color: rgba(8, 8, 8, 0.8);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom-color: var(--border-color);
+  }
+}
+
+/* 3. Global Reveal-on-Scroll Animations (IntersectionObserver hooks) */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  filter: blur(4px);
+  transition: opacity 0.8s cubic-bezier(0.25, 0.8, 0.25, 1),
+              transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1),
+              filter 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+  will-change: opacity, transform, filter;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+/* Delay modifiers for sequenced reveals */
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+
+/* 4. Core Keyframe Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Applying entrance animations on initial page load */
+.animate-fade-in-up {
+  animation: fadeInUp 1s cubic-bezier(0.25, 0.8, 0.25, 1) both;
+}
+
+.animate-fade-in {
+  animation: fadeIn 1.2s cubic-bezier(0.25, 0.8, 0.25, 1) both;
+}
+
+/* 5. Accessibility Support - Respecting prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+    transition: none !important;
+  }
+  
+  .site-header {
+    animation: none !important;
+  }
+}

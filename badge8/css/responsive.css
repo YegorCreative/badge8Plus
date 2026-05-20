@@ -1,0 +1,148 @@
+/**
+ * Badge 8 - Responsive Breakpoints & Adapters
+ * Implements mobile-first layout scales for tablets, desktops, and ultra-wide screens.
+ */
+
+/* ==========================================================================
+   Mobile-First Default States (Adjustments for Mobile Screens)
+   ========================================================================== */
+.site-header {
+  padding: 0 var(--space-md);
+}
+
+/* Mobile Nav Drawer overlay style */
+.nav-menu {
+  position: fixed;
+  top: 90px; /* Offset below header */
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 90px);
+  background-color: var(--bg-primary);
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: var(--space-4xl);
+  gap: var(--space-2xl);
+  z-index: var(--z-overlay);
+  
+  /* Slide out transition */
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+              opacity 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.nav-menu.open {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.nav-toggle {
+  display: flex;
+}
+
+/* Mobile states for toggle spans */
+.nav-menu-active .nav-toggle span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.nav-menu-active .nav-toggle span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-menu-active .nav-toggle span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Block main scroll when mobile menu is open */
+body.nav-menu-active {
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Tablet Breakpoint (768px and up)
+   ========================================================================== */
+@media (min-width: 768px) {
+  :root {
+    --space-4xl: 7rem;
+    --space-5xl: 9rem;
+  }
+
+  .grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .site-footer .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .site-footer .footer-links-group {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ==========================================================================
+   Desktop Breakpoint (1024px and up)
+   ========================================================================== */
+@media (min-width: 1024px) {
+  :root {
+    --space-4xl: 8rem;
+    --space-5xl: 10rem;
+  }
+
+  /* Reset mobile nav overlay to standard top row */
+  .nav-menu {
+    position: static;
+    height: auto;
+    width: auto;
+    background-color: transparent;
+    flex-direction: row;
+    padding-top: 0;
+    gap: var(--space-xl);
+    transform: none;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* Footer Layout for Desktop */
+  .site-footer .footer-grid {
+    grid-template-columns: 2fr 3fr;
+    gap: var(--space-4xl);
+  }
+
+  .site-footer .footer-links-group {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .site-footer .footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* ==========================================================================
+   Large Desktop Breakpoint (1440px and up)
+   ========================================================================== */
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1320px;
+  }
+}

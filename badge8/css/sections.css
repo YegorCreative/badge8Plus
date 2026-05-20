@@ -1,0 +1,277 @@
+/**
+ * Badge 8 - Section Specific Layouts
+ * Outlines the structural configuration for each specific section block on the homepage
+ */
+
+/* ==========================================================================
+   1. Hero Section
+   ========================================================================== */
+.section-hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 140px; /* Account for fixed top navigation header */
+  padding-bottom: var(--space-4xl);
+  overflow: hidden;
+  background-color: #050505;
+}
+
+.hero-content {
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-lg);
+  z-index: var(--z-above);
+  position: relative;
+}
+
+.hero-headline {
+  font-size: clamp(2.8rem, 6.5vw, 4.8rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+.hero-description {
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  color: var(--text-secondary);
+  line-height: 1.5;
+  max-width: 600px;
+  margin-bottom: var(--space-md);
+}
+
+/* Background Atmosphere Glow */
+.hero-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vw;
+  height: 60vh;
+  background: radial-gradient(circle, rgba(195, 176, 145, 0.035) 0%, rgba(0, 0, 0, 0) 70%);
+  z-index: var(--z-base);
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   2. Problem Statement
+   ========================================================================== */
+.section-problem {
+  background-color: var(--bg-primary);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.problem-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.problem-quote {
+  font-family: var(--font-primary);
+  font-size: clamp(1.6rem, 3.5vw, 2.5rem);
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--text-primary);
+  letter-spacing: 0.01em;
+  margin-bottom: var(--space-xl);
+}
+
+.problem-meta {
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+}
+
+/* ==========================================================================
+   3. What Badge 8 Does (Services)
+   ========================================================================== */
+.section-services {
+  background-color: var(--bg-secondary);
+}
+
+.section-header {
+  margin-bottom: var(--space-3xl);
+  max-width: 650px;
+}
+
+.section-header h2 {
+  margin-bottom: var(--space-sm);
+}
+
+.section-header p {
+  color: var(--text-secondary);
+}
+
+/* ==========================================================================
+   4. Core Advantages
+   ========================================================================== */
+.section-advantages {
+  background-color: var(--bg-primary);
+}
+
+.advantage-card {
+  padding: var(--space-2xl) var(--space-xl);
+  height: 100%;
+}
+
+.advantage-number {
+  font-family: var(--font-primary);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: rgba(195, 176, 145, 0.15);
+  line-height: 1;
+  margin-bottom: var(--space-md);
+}
+
+/* ==========================================================================
+   5. Use Cases
+   ========================================================================== */
+.section-use-cases {
+  background-color: var(--bg-secondary);
+}
+
+.use-case-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  padding: var(--space-xl) 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.use-case-item:last-child {
+  border-bottom: none;
+}
+
+.use-case-title {
+  font-family: var(--font-primary);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* ==========================================================================
+   6. Process
+   ========================================================================== */
+.section-process {
+  background-color: var(--bg-primary);
+}
+
+.process-steps {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+  position: relative;
+}
+
+.process-step {
+  display: flex;
+  gap: var(--space-xl);
+  padding-bottom: var(--space-xl);
+  border-bottom: 1px solid var(--border-color);
+  align-items: flex-start;
+}
+
+.process-step:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.process-num {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--accent-gold);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-sm);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background-color: rgba(195, 176, 145, 0.05);
+}
+
+.process-detail {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.process-step-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* ==========================================================================
+   7. Differentiation
+   ========================================================================== */
+.section-diff {
+  background-color: var(--bg-secondary);
+}
+
+.diff-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: var(--space-xl);
+}
+
+.diff-table th,
+.diff-table td {
+  padding: var(--space-lg);
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.diff-table th {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-primary);
+}
+
+.diff-table td {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.diff-table td strong {
+  color: var(--accent-gold);
+}
+
+/* ==========================================================================
+   8. Final Call to Action
+   ========================================================================== */
+.section-cta {
+  background-color: var(--bg-primary);
+  text-align: center;
+  padding-top: var(--space-5xl);
+  padding-bottom: var(--space-5xl);
+}
+
+.cta-wrap {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+.cta-headline {
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.25;
+}
+
+.cta-description {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-md);
+}
