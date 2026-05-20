@@ -15,10 +15,11 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
   border-radius: var(--radius-sm);
-  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
   position: relative;
   overflow: hidden;
   white-space: nowrap;
+  box-shadow: none; /* Architectural flat restraint */
 }
 
 /* Primary Understated Accent Button */
@@ -32,7 +33,7 @@
   background-color: var(--text-primary);
   border-color: var(--text-primary);
   color: var(--bg-primary);
-  /* Removed flashy white glow to maintain pure corporate restraint */
+  box-shadow: none; /* Guaranteed zero shadows */
 }
 
 /* Secondary Refined Outline Button */
@@ -45,7 +46,8 @@
 .btn-outline:hover {
   border-color: var(--accent-gold);
   color: var(--text-primary);
-  /* Grounded outline transition with zero floating shadows */
+  background-color: rgba(255, 255, 255, 0.02); /* Subtle value shift */
+  box-shadow: none; /* Guaranteed zero shadows */
 }
 
 /* Text-Only Link Button */

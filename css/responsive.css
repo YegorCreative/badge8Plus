@@ -10,6 +10,22 @@
   padding: 0 var(--space-md);
 }
 
+/* Hero Section Mobile-First Framing */
+.section-hero {
+  min-height: calc(100vh - 80px); /* Clean viewport filling without crowding */
+  padding-top: 100px;
+  padding-bottom: var(--space-2xl);
+}
+
+.hero-headline {
+  font-size: clamp(2.0rem, 7vw, 2.8rem);
+  line-height: 1.2;
+}
+
+.hero-description {
+  margin-bottom: var(--space-md);
+}
+
 /* Mobile Nav Drawer overlay style */
 .nav-menu {
   position: fixed;
@@ -70,6 +86,18 @@ body.nav-menu-active {
     --space-5xl: 9rem;
   }
 
+  /* Hero Section Tablet Scale */
+  .section-hero {
+    min-height: 100vh;
+    padding-top: 130px;
+    padding-bottom: var(--space-3xl);
+  }
+
+  .hero-headline {
+    font-size: clamp(2.5rem, 5.5vw, 3.8rem);
+    line-height: 1.15;
+  }
+
   .grid {
     gap: var(--space-2xl); /* Dynamic tablet grid gap expansion */
   }
@@ -98,6 +126,17 @@ body.nav-menu-active {
   :root {
     --space-4xl: 8rem;
     --space-5xl: 10rem;
+  }
+
+  /* Hero Section Desktop Scale */
+  .section-hero {
+    padding-top: 150px;
+    padding-bottom: var(--space-4xl);
+  }
+
+  .hero-headline {
+    font-size: clamp(2.8rem, 6.5vw, 4.8rem);
+    line-height: 1.15;
   }
 
   .grid {
@@ -180,5 +219,11 @@ body.nav-menu-active {
 @media (min-width: 1440px) {
   .container {
     max-width: 1320px;
+  }
+
+  /* Hero Section Large Desktop Scale */
+  .section-hero {
+    padding-top: 170px;
+    padding-bottom: var(--space-5xl);
   }
 }
